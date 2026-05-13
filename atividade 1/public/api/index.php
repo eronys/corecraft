@@ -5,9 +5,15 @@
  */
 
 // Configurações do Bitcoin Core RPC
-define('RPC_URL', 'http://127.0.0.1:18443/');
-define('RPC_USER', 'dev');
-define('RPC_PASS', 'devmode');
+$config = require __DIR__ . '/../../config/bitcoin.php';
+$rpcHost = $config['rpc']['host'] ?? '127.0.0.1';
+$rpcPort = $config['rpc']['port'] ?? 18443;
+$rpcUser = $config['rpc']['user'] ?? 'dev';
+$rpcPass = $config['rpc']['pass'] ?? 'devmode';
+
+define('RPC_URL', "http://{$rpcHost}:{$rpcPort}/");
+define('RPC_USER', $rpcUser);
+define('RPC_PASS', $rpcPass);
 
 /**
  * Função para fazer chamadas RPC ao Bitcoin Core

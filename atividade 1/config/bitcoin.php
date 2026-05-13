@@ -3,7 +3,7 @@
 return [
     'rpc' => [
         'host' => '127.0.0.1',
-        'port' => 18443,
+        'port' => 38332,
         'user' => 'dev',
         'pass' => 'devmode',
         'timeout' => 30

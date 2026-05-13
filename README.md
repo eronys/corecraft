@@ -25,10 +25,21 @@ server=1
 rpcuser=dev
 rpcpassword=devmode
 rpcport=18443
+
 ```
-*(Se as suas credenciais forem diferentes, você precisará alterá-las no arquivo `atividade 1/public/api/index.php` nas constantes `RPC_USER`, `RPC_PASS` e `RPC_URL`)*.
+
+Rede (porta padrão)
+Mainnet	-	8333
+Testnet	-	18333
+Signet	-	38333
+Regtest	-	18444
+
+*(Se as suas credenciais ou portas forem diferentes, você precisará alterá-las no arquivo `atividade 1/config/bitcoin.php`)*.
 
 #### 3. Iniciando a aplicação
+
+> **Aviso Importante:** A pasta correta para subir a aplicação é **dentro** das pastas das respectivas atividades (ex: `atividade 1`), e nunca na raiz do repositório.
+
 Abra o seu terminal e navegue até a pasta da **atividade 1**:
 ```bash
 cd "atividade 1"
@@ -54,6 +65,8 @@ Ele provê uma interface interativa (menu em terminal) onde você pode:
 - **Status node:** Mostra informações da rede usando `getblockchaininfo` ou lê o `debug.log`.
 - **Parar node:** Desliga o node com segurança.
 - **Configurar parâmetro especial:** Permite inserir ou alterar valores não padronizados no arquivo `bitcoin.conf` específicos da rede selecionada (ex: `txindex` para Regtest, `prune` para Mainnet, ou `fallbackfee` para Signet/Testnet).
+
+
 
 Para rodar a ferramenta de automação:
 ```bash
