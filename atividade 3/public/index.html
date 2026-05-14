@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Core Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Bitcoin Core Dashboard</h1>
+            <p>Monitoramento inteligente do node Bitcoin</p>
+        </header>
+
+        <main class="dashboard-layout">
+            <section class="panel-group tx-group">
+                <h2 class="group-title">💸 Transações e Carteiras</h2>
+                <div class="dashboard tx-dashboard">
+                    <div class="card" id="wallet-selector-panel">
+                        <h2>Gestão de Carteiras</h2>
+                        <div class="wallet-controls">
+                            <label for="wallet-select">Carteira Ativa:</label>
+                            <select id="wallet-select" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; border-radius: 5px; background: rgba(0,0,0,0.2); color: white; border: 1px solid #444;">
+                                <option value="">Carregando carteiras...</option>
+                            </select>
+                            <div id="wallet-info" style="margin-top: 1rem; font-size: 0.9rem; color: #00ff88;">
+                                <!-- Saldo e UTXOs aparecerão aqui -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="tx-creation-panel">
+                        <h2>Criar Transação</h2>
+                        <p style="font-size: 0.8rem; margin-bottom: 1rem; color: #aaa;">Gere uma transação aleatória usando a carteira selecionada.</p>
+                        <button id="btn-generate-tx" style="width: 100%; padding: 0.8rem; border-radius: 5px; background: #2a5298; color: white; border: none; cursor: pointer; font-weight: bold;" disabled>Gerar Transação Aleatória</button>
+                    </div>
+
+                    <div class="card" id="tx-monitoring-panel">
+                        <h2>Acompanhamento de TX</h2>
+                        <div id="tx-status-list" style="max-height: 150px; overflow-y: auto;">
+                            <small style="color: #aaa;">Nenhuma transação enviada recentemente.</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel-group rpc-group">
+                <h2 class="group-title">🔄 RPC: Estado Consistente</h2>
+                <div class="dashboard">
+                    <div class="card" id="sync-status">
+                        <h2>⏱ Node Sync Status</h2>
+                        <div class="loading">Carregando...</div>
+                    </div>
+
+                    <div class="card" id="mempool-intelligence">
+                        <h2>🧠 Mempool Intelligence</h2>
+                        <div class="loading">Carregando...</div>
+                    </div>
+
+                    <div class="card" id="raw-data">
+                        <h2>📊 Dados Técnicos</h2>
+                        <div class="loading">Carregando...</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel-group zmq-group">
+                <h2 class="group-title">⚡ Eventos ZMQ (Em Tempo Real)</h2>
+                <div class="dashboard zmq-dashboard">
+                    <div class="card" id="zmq-activity">
+                        <h2>⚡ Event Activity</h2>
+                        <div class="loading">Aguardando backend ZMQ...</div>
+                    </div>
+
+                    <div class="card" id="zmq-latest-events">
+                        <h2>🔍 Últimos Eventos</h2>
+                        <div class="loading">Aguardando backend ZMQ...</div>
+                    </div>
+
+                    <div class="card" id="zmq-divergence">
+                        <h2>⚠️ Status de Divergência</h2>
+                        <div class="loading">Aguardando backend ZMQ...</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
