@@ -28,11 +28,12 @@ rpcport=18443
 
 ```
 
-Rede (porta padrão)
-Mainnet	-	8333
-Testnet	-	18333
-Signet	-	38333
-Regtest	-	18444
+Rede | P2P | RPC | ZMQ (Sugerido)
+--- | --- | --- | ---
+Mainnet | 8333 | 8332 | 28332 / 28333
+Testnet | 18333 | 18332 | 28332 / 28333
+Signet | 38333 | 38332 | 28332 / 28333
+Regtest | 18444 | 18443 | 28332 / 28333
 
 *(Se as suas credenciais ou portas forem diferentes, você precisará alterá-las no arquivo `atividade 1/config/bitcoin.php`)*.
 

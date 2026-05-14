@@ -27,10 +27,31 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+.dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.panel-group {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
 .dashboard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
 }
 
 .card {
